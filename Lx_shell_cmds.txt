@@ -1,5 +1,5 @@
-# To find all files that contain "dprintf" but are missing "#define dprintf"
-grep -L "#define dprintf" $(grep -rnl dprintf *)
+# To find all files that contain "foo" but are missing "#define foo"
+grep -L "#define foo" $(grep -rnl foo *)
 
 VIM:
 ++++
@@ -43,6 +43,9 @@ CTRL-R CTRL-A				*c_CTRL-R_CTRL-A* *c_<C-R>_<C-A>*
 :verbose set history?   : reveals value of history and where set  
 :function               : list functions  
 :func SearchCompl       : List particular function
+
+# ESC key 
+esc key can be duplicated with Ctrl+[
 
 #page movements
 [CTRL][b] - Move back one full screen
