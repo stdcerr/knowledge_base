@@ -1,0 +1,173 @@
+# To find all files that contain "dprintf" but are missing "#define dprintf"
+grep -L "#define dprintf" $(grep -rnl dprintf *)
+
+VIM:
+++++
+#use VIM registers
+"ky (to yank selection into register k)
+"kp (yo paste what's been yanked into register k)
+
+#switch between vertical & horizontal splits
+ctrl-w H (to horizontal)
+ctrl-w K (to vertical)
+
+# save file as root
+:w !sudo tee %
+
+#search and replace
+:%s/foo/bar/g
+
+#enforce syntax coloring
+:set syntax=c
+#switch from vertical split to horizontal split
+ctrl-w K
+#switch from horizontal split to vertical split
+ctrl-w H
+
+#Open bash in vim split
+:ConqueTerm bash
+
+#use word under cursor in command line (http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R_CTRL-W)
+CTRL-R CTRL-W				*c_CTRL-R_CTRL-W* *c_<C-R>_<C-W>*
+
+CTRL-R CTRL-A				*c_CTRL-R_CTRL-A* *c_<C-R>_<C-A>*
+		Insert the object under the cursor:
+			CTRL-F	the Filename under the cursor
+			CTRL-P	the Filename under the cursor, expanded with
+				'path' as in |gf|
+			CTRL-W	the Word under the cursor
+			CTRL-A	the WORD under the cursor; see |WORD|
+            
+#list loaded plugins in Vim
+:scriptnames            : list all plugins, _vimrcs loaded (super)  
+:verbose set history?   : reveals value of history and where set  
+:function               : list functions  
+:func SearchCompl       : List particular function
+
+#page movements
+[CTRL][b] - Move back one full screen
+[CTRL][f] - Move forward one full screen
+[CTRL][d] - Move forward 1/2 screen
+[CTRL][u] - Move back (up) 1/2 screen
+NERDTree:
+---------
+open file in vertical split:
+open with s
+open file in horizontal split:
+open with i
+search fof file:
+:set path=/home/ron/src/NextGen/branches/Release_1.10/src/rtos_core/**
+:find filename.ext
+
+#scroll bind both split windows
+:set scb! //in both splits
+
+search case insensitive
+/\cterm
+search case sensitive
+/term or /\Cterm
+
+#swap files in splits
+ctrl-W r
+
+CScope:
+-------
+search for call:
+:cs f c <symbol>
+search for symbol:
+:cs f s <symbol>
+search for text:
+:cs f t <text>
+jump to next result
+:cnext
+return to previous result
+:cprev
+
+
+#activate visual block mode
+Ctrl+V SHIFT+i to start inserting before every line of the block
+
+# taglist vim
+http://www.thegeekstuff.com/2009/04/ctags-taglist-vi-vim-editor-as-sourece-code-browser/
+
+# cscope vim
+https://a0gustinus.wordpress.com/2013/06/01/browsing-source-code-in-linux-vimcscope/
+
+#open file from remote host in vim
+$vim scp://root@cc3:2222//var/log/dp.log
+
+#Use vim like an IDE
+http://vim.wikia.com/wiki/Use_Vim_like_an_IDE
+
+BASH
+++++
+#detach a running process from the shell
+Ctrl-Z
+bg
+disown %1
+
+#scan for all used IPs in a subnet:
+sudo nmap -sP 192.168.1.0/24    
+
+SED
++++
+#insert string into ini file between lines
+sed '/abc = 123/N;s/\ndef = 456/\nxyz = 987&/' myfile.ini
+
+#replace string in text files
+sed -i 's/StrA/StrB/g' *.ini
+
+SCREEN
+++++++
+#Re adjust screen to window size (fit)
+ctrl-a F
+#change window name
+^a - shift a
+list windows
+^a-"
+send command to multiple windows (http://stackoverflow.com/questions/6510673/in-screen-how-do-i-send-a-command-to-all-virtual-terminal-windows-within-a-sing)
+^a :at "#" stuff "switch_port_stats_clear_all^M"
+#vertical split
+^a - |
+#horizontal split
+^a - S
+#close split
+^a - X
+#detach another session and reattach from here
+screen -d -r sessionname
+
+#select text and copy to system clipboard
+Enter scrollback mode using C-a [ or C-a ESC.
+Press the space bar to begin selecting text.
+Move the cursor using h,j,k,l,C-b,C-f or arrow keys/PGUP/PGDOWN.
+Hit the space bar again to copy the selected text.
+Hit ESC to exit scrollback mode.
+Press C-a ] to paste.
+
+MIDNIGHT COMMANDER
+++++++++++++++++++
+Change to shell and back to midnight commander
+^o
+
+START WR LICENSE SERVER
++++++++++++++++++++++++
+~/WindRiver/license/admintools-1.3/x86-linux2/lmgrd -c ~/WindRiver/license/admintools-1.3/x86-linux2/license.lic -l
+
+TMUX
+++++
+
+#Enter scroll mode 
+Ctrl-b [
+
+#to find a string in history
+Ctrl-s <enter> from scroll mode
+
+#to select and copy text
+Move to start/end of text to highlight.
+Ctrl space. ...
+Move to opposite end of text to copy.
+Alt + w Copies selected text into tmux clipboard. ...
+Move cursor to opposite tmux pane, or completely different tmux window. ...
+Ctrl + b , ] Paste copied text from tmux clipboard.
+
+

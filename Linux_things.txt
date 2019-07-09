@@ -1,0 +1,7 @@
+#TFTP server
+http://askubuntu.com/questions/201505/how-do-i-install-and-run-a-tftp-server
+
+#Bring back eth0 device
+create rule in /etc/udev/rules.d/10-rename-network.rules containing only this line:
+SUBSYSTEM=="net", ACTION=="add", ATTR{address}=="00:50:56:98:00:19", NAME="eth0"
+mind the mac must match!
