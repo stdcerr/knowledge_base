@@ -10,6 +10,10 @@ Move cursor to other tmux paneor window
 Ctrl + b , ] Paste copied text from tmux clipboard.
 -------------------------
 
+#list all open windows in session
+ctrl-b :list
+------------------
+
 #create new window
 ctrl-b + c
 ------------------
