@@ -1,0 +1,8 @@
+#Adding only tracked files to index with git add -u and ignoring untracked files for next commit
+git add -u
+
+#Unstage files This will unstage the file but maintain the modifications.
+use "git reset HEAD <file>..." to unstage.
+
+#Revert the fiel back to the state it was before the changes
+git checkout -- <file>
