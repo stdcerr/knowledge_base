@@ -10,9 +10,14 @@ Move cursor to other tmux paneor window
 Ctrl + b , ] Paste copied text from tmux clipboard.
 -------------------------
 
+*** INSIDE TMUX SESSION***
+
 #list all open windows in session
 ctrl-b :list-windows
 ------------------
+#resize pane
+ctrl-c :resize-pane -U/-D/-L/-R ##
+----------------------
 
 #create new window
 ctrl-b + c
@@ -22,6 +27,17 @@ ctrl-b + c
 ctrl-b + n
 ----------------------
 
-#resize pane
-ctrl-c :resize-pane -U/-D/-L/-R ##
+#detach from session
+ctrl-b + d
 ----------------------
+
+
+*** OUTSIDE TMUX ***
+
+#list active sessions
+---------------------
+tmux ls
+
+#connect to active session
+--------------------------
+tmux a -t #
