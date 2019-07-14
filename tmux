@@ -21,3 +21,7 @@ ctrl-b + c
 #switch to next window
 ctrl-b + n
 ----------------------
+
+#resize pane
+ctrl-c :resize-pane -U/-D/-L/-R ##
+----------------------
