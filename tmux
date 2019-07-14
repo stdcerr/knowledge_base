@@ -11,7 +11,7 @@ Ctrl + b , ] Paste copied text from tmux clipboard.
 -------------------------
 
 #list all open windows in session
-ctrl-b :list
+ctrl-b :list-windows
 ------------------
 
 #create new window
