@@ -16,7 +16,7 @@ Ctrl + b , ] Paste copied text from tmux clipboard.
 ctrl-b :list-windows
 ------------------
 #resize pane
-ctrl-c :resize-pane -U/-D/-L/-R ##
+ctrl-b :resize-pane -U/-D/-L/-R ##
 ----------------------
 
 #create new window
