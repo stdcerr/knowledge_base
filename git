@@ -6,3 +6,9 @@ use "git reset HEAD <file>..." to unstage.
 
 #Revert the fiel back to the state it was before the changes
 git checkout -- <file>
+
+#view unpushed commits
+git log origin/master..HEAD
+
+#diff of unpushed commits
+git diff origin/master..HEAD
