@@ -31,6 +31,10 @@ ctrl-b + n
 ctrl-b + d
 ----------------------
 
+#kill window (and all panes)
+ctrl+b &
+---------------------
+
 
 *** OUTSIDE TMUX ***
 
