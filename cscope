@@ -1,0 +1,14 @@
+#search for call:
+:cs f c <symbol>
+
+#search for symbol:
+:cs f s <symbol>
+
+#search for text:
+:cs f t <text>
+
+#jump to next result
+:cnext
+
+#return to previous result
+:cprev

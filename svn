@@ -1,0 +1,2 @@
+#see files changed at commit of certain revision
+svn log -v -r <revision>
