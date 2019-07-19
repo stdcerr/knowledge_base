@@ -17,6 +17,12 @@ ctrl-b :list-windows
 ------------------
 #resize pane
 ctrl-b :resize-pane -U/-D/-L/-R ##
+or
+In tmux 1.8, the size of the panes may be adjusted interactively. 
+Under the default key bindings this may be done by the prefix key 
+(C-b) followed by the meta key combined with arrow keys (M-arrow), 
+where arrow is one of the up/down/left/right arrow keys. 
+E.g. Ctrl - b followed by Alt - Up will adjust the size upwards.
 ----------------------
 
 #create new window
