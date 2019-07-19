@@ -1,4 +1,4 @@
-#debug print using std:cout
+#lazy,easy & quick debug print using std:cout
 #define DEBUG
 
 #ifdef DEBUG
