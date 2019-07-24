@@ -1,2 +1,5 @@
 #see files changed at commit of certain revision
 svn log -v -r <revision>
+
+#exclude certain directories from svn update
+svn ls | xargs -L 1 svn up --set-depth empty
