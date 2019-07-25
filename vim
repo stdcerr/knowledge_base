@@ -4,8 +4,8 @@
 ------------------
 
 #switch between vertical & horizontal splits
-ctrl-w H (to horizontal)
-ctrl-w K (to vertical)
+ctrl-w  shift H (to vertical)
+ctrl-w  shift K (to horizontal)
 ------------------
 
 # save file as root
