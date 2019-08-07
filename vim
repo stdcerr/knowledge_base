@@ -29,15 +29,15 @@ ctrl-w H
 ------------------
 
 #use word under cursor in command line (http://vimdoc.sourceforge.net/htmldoc/cmdline.html#c_CTRL-R_CTRL-W)
-CTRL-R CTRL-W				*c_CTRL-R_CTRL-W* *c_<C-R>_<C-W>*
+CTRL-r CTRL-w				*c_CTRL-R_CTRL-W* *c_<C-R>_<C-W>*
 
-CTRL-R CTRL-A				*c_CTRL-R_CTRL-A* *c_<C-R>_<C-A>*
+CTRL-r CTRL-a				*c_CTRL-R_CTRL-A* *c_<C-R>_<C-A>*
 		Insert the object under the cursor:
-			CTRL-F	the Filename under the cursor
-			CTRL-P	the Filename under the cursor, expanded with
+			CTRL-f	the Filename under the cursor
+			CTRL-p	the Filename under the cursor, expanded with
 				'path' as in |gf|
-			CTRL-W	the Word under the cursor
-			CTRL-A	the WORD under the cursor; see |WORD|
+			CTRL-w	the Word under the cursor
+			CTRL-a	the WORD under the cursor; see |WORD|
 ------------------
 
 #list loaded plugins in Vim
@@ -50,3 +50,7 @@ CTRL-R CTRL-A				*c_CTRL-R_CTRL-A* *c_<C-R>_<C-A>*
 # ESC key 
 esc key can be duplicated with Ctrl+[
 ------------------
+
+#move split into a new tab
+--------------------------
+CTRL-W CTRL-T
