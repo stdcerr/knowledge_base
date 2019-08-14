@@ -12,3 +12,6 @@ git log origin/master..HEAD
 
 #diff of unpushed commits
 git diff origin/master..HEAD
+
+#list remote branches
+git branch -a
