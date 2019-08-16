@@ -54,3 +54,7 @@ esc key can be duplicated with Ctrl+[
 #move split into a new tab
 --------------------------
 CTRL-W CTRL-T
+
+#show line number in status bar
+-------------------------------
+:set ruler
