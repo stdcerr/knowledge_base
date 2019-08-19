@@ -15,3 +15,6 @@ git diff origin/master..HEAD
 
 #list remote branches
 git branch -a
+
+#get count of all revisions across alkl branches
+git rev-list --all --count
