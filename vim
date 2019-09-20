@@ -58,3 +58,11 @@ CTRL-W CTRL-T
 #show line number in status bar
 -------------------------------
 :set ruler
+
+#display line number
+---------------------
+set nu!
+
+#display relastive line number
+-------------------------------
+set rnu!
