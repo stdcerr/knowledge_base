@@ -118,10 +118,13 @@ echo "MyString" | tee -a *.ini
 SED
 +++
 #insert string into ini file between lines
-sed '/abc = 123/N;s/\ndef = 456/\nxyz = 987&/' myfile.ini
+sed -i '/abc = 123/N;s/\ndef = 456/\nxyz = 987&/' myfile.ini
 
 #replace string in text files
 sed -i 's/StrA/StrB/g' *.ini
+
+#remove a line containing the string awk in filename.txt
+sed -i '/awk/d' filename.txt
 
 SCREEN
 ++++++
