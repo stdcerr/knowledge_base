@@ -3,3 +3,6 @@ svn log -v -r <revision>
 
 #exclude certain directories from svn update
 svn ls | xargs -L 1 svn up --set-depth empty
+
+#revert single commit
+svn merge -c -9999 file.c
