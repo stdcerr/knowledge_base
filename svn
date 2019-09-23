@@ -6,3 +6,23 @@ svn ls | xargs -L 1 svn up --set-depth empty
 
 #revert single commit
 svn merge -c -9999 file.c
+
+#svn sparse directories
+
+$ rm -rf mom-empty
+$ svn checkout file:///var/svn/repos mom-empty --depth empty
+Checked out revision 1.
+$ svn update --set-depth empty mom-empty/son
+Updating 'mom-empty/son':
+A    mom-empty/son
+Updated to revision 1.
+$ svn update --set-depth empty mom-empty/daughter
+Updating 'mom-empty/daughter':
+A    mom-empty/daughter
+Updated to revision 1.
+$ svn update --set-depth infinity mom-empty/daughter/granddaughter1
+Updating 'mom-empty/daughter/granddaughter1':
+A    mom-empty/daughter/granddaughter1
+A    mom-empty/daughter/granddaughter1/bunny1.txt
+A    mom-empty/daughter/granddaughter1/bunny2.txt
+Updated to revision 1.
