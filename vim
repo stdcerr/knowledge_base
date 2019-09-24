@@ -66,3 +66,11 @@ set nu!
 #display relastive line number
 -------------------------------
 set rnu!
+
+delete until next chracter w/o char
+------------------------------------
+dtc 
+
+delete until next chracter with char
+-------------------------------------
+dfc
