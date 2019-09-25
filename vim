@@ -74,3 +74,11 @@ dtc
 delete until next chracter with char
 -------------------------------------
 dfc
+
+replace one word with another
+-----------------------------
+1 "This first word should overwrite the second"
+
+yiw     yank inner word (copy word under cursor, say "first").
+...     Move the cursor to another word (say "second").
+viwp    select "second", then replace it with "first". 
