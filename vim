@@ -14,6 +14,8 @@ ctrl-w  shift K (to horizontal)
 
 #search and replace
 :%s/foo/bar/g
+to remove Winsdows line endings (^M) use:
+ \r or CTRL-v + CTRL-m
 ------------------
 
 #enforce syntax coloring
