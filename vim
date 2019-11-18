@@ -53,9 +53,17 @@ CTRL-r CTRL-a				*c_CTRL-R_CTRL-A* *c_<C-R>_<C-A>*
 esc key can be duplicated with Ctrl+[
 ------------------
 
-#move split into a new tab
---------------------------
-CTRL-W CTRL-T
+#Swap top/bottom or left/right split
+-------------------------------------
+Ctrl+W R
+
+"#reak out current window into a new tabview
+--------------------------------------------
+Ctrl+W T
+
+#Close every window in the current tabview but the current one
+--------------------------------------------------------------
+Ctrl+W o
 
 #show line number in status bar
 -------------------------------
